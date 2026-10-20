@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form Sabrina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="registration-form" novalidate>
+        <div class="form-header">
+            <h1>Registration Form</h1>
+        </div>
+
+        <div class="form-content">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+                <small class="error" id="fullname-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="mail">Email Address</label>
+                <input type="email" id="mail" name="mail" placeholder="example@email.com">
+                <small class="error" id="mail-error"></small>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="At least 6 characters">
+                    <small class="error" id="password-error"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password"placeholder="Repeat your password">
+                    <small class="error" id="confirm-password-error"></small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="At least 10 digits">
+                <small class="error" id="phone-error"></small>
+            </div>
+
+            <div class="form-section">
+                <h4>Choose Your Gender</h4>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="male" name="gender" value="MALE">
+                        <label for="male">Male</label>
+                    </div>
+
+                    <div class="radio-item">
+                        <input type="radio" id="female" name="gender" value="FEMALE">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+                <small class="error" id="gender-error"></small>
+            </div>
+
+            <div class="form-section">
+                <h4>Choose Your Hobbies / Interests</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobi1" name="hobbies" value="Painting">
+                        <label for="hobi1">Painting</label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobi2" name="hobbies" value="Reading">
+                        <label for="hobi2">Reading</label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="hobi3" name="hobbies" value="Music">
+                        <label for="hobi3">Music</label>
+                    </div>
+                </div>
+                <small class="error" id="hobbies-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="">Choose your country</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Japan">Japan</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                </select>
+                <small class="error" id="country-error"></small>
+            </div>
+
+            <!-- Additional fields from your original form -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="birthday">Date of Birth</label>
+                    <input type="date" id="birthday" name="birthday">
+                </div>
+
+                <div class="form-group">
+                    <label for="jurusan">Program of Study</label>
+                    <select id="jurusan" name="jurusan">
+                        <option value="">Choose your program</option>
+                        <option value="sisfor">Information Systems</option>
+                        <option value="comsi">Computer Science</option>
+                        <option value="dkv">Digital Communication Visual</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Full Address</label>
+                <textarea id="address" name="alamat" placeholder="Enter your full address"></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Submit Registration</button>
+            </div>
+
+            <p id="success-message" role="status" aria-live="polite" hidden>
+                Registration form completed successfully!
+            </p>
+        </div>
+
+        <footer class="form-footer">
+            <p>&copy; 2026 Sabrina. All Rights Reserved.</p>
+        </footer>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

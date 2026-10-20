@@ -1,0 +1,234 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f8eef6, #fcafed);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    color: #4a3b47;
+}
+
+form {
+    background-color: white;
+    max-width: 650px;
+    margin: 0 auto;
+    border: 3px solid #ffbadc;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(120, 70, 110, 0.15);
+    overflow: hidden;
+}
+
+.form-header {
+    background: linear-gradient(135deg, #d98bc0, #b875bb);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.form-header h1 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    margin: 0 0 8px;
+    text-shadow: 1px 1px 3px rgba(90, 40, 80, 0.25);
+}
+
+.form-content {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    min-width: 0;
+}
+
+.form-group label,
+.form-section h4 {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0 0 8px;
+    color: #60465a;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d9b5cf;
+    border-radius: 8px;
+    background-color: #fffafd;
+    color: #4a3b47;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #c16ca9;
+    box-shadow: 0 0 0 3px rgba(193, 108, 169, 0.15);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-section {
+    margin-bottom: 22px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.radio-item label,
+.checkbox-item label {
+    margin: 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 11px;
+    border: 1px solid #ead5e4;
+    border-radius: 8px;
+    background-color: #fdf7fb;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+.checkbox-item:hover {
+    background-color: #f7e5f2;
+    border-color: #d98bc0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #c16ca9;
+    cursor: pointer;
+}
+
+textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+.error {
+    display: block;
+    color: #d93050;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.error:empty {
+    display: none;
+}
+
+.invalid {
+    border: 1px solid #d93050 !important;
+    background-color: #fff7f8 !important;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+button {
+    border: none;
+    border-radius: 9px;
+    padding: 13px 25px;
+    background: linear-gradient(135deg, #d98bc0, #b875bb);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(168, 77, 148, 0.25);
+}
+
+button:focus-visible {
+    outline: 3px solid #a85395;
+    outline-offset: 3px;
+}
+
+#success-message {
+    margin: 20px 0 0;
+    padding: 13px;
+    border: 1px solid #9ed9b2;
+    border-radius: 8px;
+    background-color: #effbf2;
+    color: #237a43;
+    text-align: center;
+    font-size: 14px;
+}
+
+.form-footer {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #ead5e4;
+    background-color: #fdf7fb;
+    color: #9a7d91;
+    font-size: 12px;
+}
+
+.form-footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .form-content {
+        padding: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group button {
+        width: 100%;
+    }
+}
